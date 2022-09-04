@@ -1,3 +1,4 @@
+ifeq ($(call is-vendor-board-platform,QCOM),true)
 LOCAL_PATH := $(call my-dir)
 
 QMAA_DISABLES_WFD := false
@@ -23,3 +24,4 @@ include $(call all-makefiles-under, $(LOCAL_PATH))
 endif #QMAA_DISABLES_WFD
 endif #TARGET_HAS_LOW_RAM
 endif #WFD_DISABLE_PLATFORM_LIST
+endif # QCOM Platform
